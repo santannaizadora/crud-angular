@@ -19,6 +19,9 @@ import { ProductCrudComponent } from './views/product-crud/product-crud.componen
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import {MatButtonModule} from '@angular/material/button';
 import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -29,7 +32,8 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
     NavComponent,
     HomeComponent,
     ProductCrudComponent,
-    ProductCreateComponent 
+    ProductCreateComponent
+    
 
   ],
   imports: [
@@ -42,8 +46,11 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
     MatCardModule,
     MatButtonModule,
     MatSnackBarModule,
-    MatSnackBarModule 
-    
+    MatSnackBarModule,
+    HttpClientModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
