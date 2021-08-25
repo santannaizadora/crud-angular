@@ -10,7 +10,7 @@ import { MatToolbarModule} from '@angular/material/toolbar';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
-
+import { HttpClientModule} from '@angular/common/http';
 
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
@@ -41,7 +41,9 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSnackBarModule 
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

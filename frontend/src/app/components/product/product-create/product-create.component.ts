@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
   
+import { Product } from './../product.model';
 import { ProductService } from './../product.service';
 
 @Component({
@@ -10,7 +11,10 @@ import { ProductService } from './../product.service';
 })
 export class ProductCreateComponent implements OnInit {
 
- 
+  product: Product = {
+    name: '',
+    price: null
+  }
 
   
   constructor(private productService: ProductService,
@@ -21,8 +25,11 @@ ngOnInit(): void {
 }
 
 createProduct(): void {
+  this.productService.create(this.product).subscribe(() => {
     this.productService.showMessage('Produto criado!')
-  
+    this.router.navigate(['/products'])
+  })
+
 }
 
 cancel(): void {
